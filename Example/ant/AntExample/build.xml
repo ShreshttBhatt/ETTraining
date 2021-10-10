@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<project name="AntExample2" default="main" basedir="." xmlns:if="ant:if" xmlns:unless="ant:unless">
+    <!-- Sets variables which can later be used. -->
+    <!-- The value of a property is accessed via ${} -->
+	<property file="build.properties"/>
+
+	 <condition property="isMac">
+	   <os family="mac" />
+	 </condition>
+	
+	 <condition property="isWindows">
+	   <os family="windows" />
+	 </condition>
+	
+	 <echo if:set="isMac">running on MacOS</echo>
+	 <echo if:set="isWindows">running on Windows</echo>
+	  	
+	<path id="master-classpath">
+      <pathelement path="${build.dir}"/>
+    </path>
+	
+	
+	<!-- JUnit classpath. -->
+	<path id="junit.class.path">
+	     <fileset dir="${lib.dir}">
+	        <include name="*.jar"/>
+	     </fileset>
+		<pathelement path="${test.dir}" />
+		<pathelement path="${build.dir}" />
+	    <pathelement path="${build.test.dir}"/>
+	</path>
+	
+    <!-- Deletes the existing build, docs and dist directory-->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="${docs.dir}" />
+        <delete dir="${dist.dir}" />
+    	<delete dir="${build.test.dir}" />
+    	<delete dir="${test.report.dir}" />
+    </target>
+
+    <!-- Creates the  build, docs and dist directory-->
+    <target name="makedir">
+        <mkdir dir="${build.dir}" />
+        <mkdir dir="${docs.dir}" />
+        <mkdir dir="${dist.dir}" />
+    	<mkdir dir="${build.test.dir}" />
+    	<mkdir dir="${test.report.dir}" />
+    </target>
+
+    <!-- Compiles the java code (including the usage of library for JUnit -->
+    <target name="compile" depends="clean, makedir">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+        	<classpath refid="master-classpath"/>
+        </javac>
+    	<javac srcdir="${test.dir}" destdir="${build.test.dir}" includeantruntime="false">
+        	<classpath refid="junit.class.path"/>
+        </javac>
+    </target>
+	
+	<!-- Run the JUnit Tests -->
+    <!-- Output is XML, could also be plain-->
+    <target name="junit" depends="compile">
+        <junit printsummary="on" fork="true" haltonfailure="yes">
+            <classpath refid="junit.class.path" />
+            <formatter type="xml" />
+            <batchtest todir="${test.report.dir}">
+                <fileset dir="${test.dir}">
+                    <include name="**/*Test*java" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- Creates Javadoc -->
+    <target name="docs" depends="compile">
+        <javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+            <!-- Define which files / directory should get included, we include all -->
+             <fileset dir="${src.dir}">
+                <include name="**" />
+             </fileset>
+        </javadoc>
+    </target>
+
+    <!--Creates the deployable jar file  -->
+    <target name="jar" depends="compile, junit">
+        <jar destfile="${dist.dir}\MyMath.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="math.Main" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="main" depends="compile, jar, docs">
+        <description>Main target</description>
+    </target>
+
+</project>

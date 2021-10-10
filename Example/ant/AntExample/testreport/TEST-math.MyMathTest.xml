@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="C02FC13HMD6R" name="math.MyMathTest" skipped="0" tests="1" time="0.069" timestamp="2021-09-28T16:50:27">
+  <properties>
+    <property name="build.test.dir" value="build/test" />
+    <property name="gopherProxySet" value="false" />
+    <property name="ant.library.dir" value="/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="java.specification.version" value="11" />
+    <property name="ant.project.name" value="AntExample2" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="ant.file.type.AntExample2" value="file" />
+    <property name="java.class.path" value="/Users/shreshttbhatt/ET_Training/ant/AntExample/lib/hamcrest-core-1.3.jar:/Users/shreshttbhatt/ET_Training/ant/AntExample/lib/junit-4.13.2.jar:/Users/shreshttbhatt/ET_Training/ant/AntExample/testsrc:/Users/shreshttbhatt/ET_Training/ant/AntExample/build:/Users/shreshttbhatt/ET_Training/ant/AntExample/build/test:/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-launcher.jar:/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant.jar:/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-junit.jar:/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-junit4.jar" />
+    <property name="java.vm.vendor" value="SAP SE" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.vendor.url" value="https://sapmachine.io/" />
+    <property name="user.timezone" value="" />
+    <property name="java.vm.specification.version" value="11" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="user.country" value="IN" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/sapmachine-jdk-11.0.10.jdk/Contents/Home/lib" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner math.MyMathTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/shreshttbhatt/ET_Training/ant/AntExample/testreport/TEST-math.MyMathTest.xml crashfile=/Users/shreshttbhatt/ET_Training/ant/AntExample/junitvmwatcher14922125642319804163.properties propsfile=/Users/shreshttbhatt/ET_Training/ant/AntExample/junit17635626043460751378.properties" />
+    <property name="jdk.debug" value="release" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="test.dir" value="testsrc" />
+    <property name="user.home" value="/Users/shreshttbhatt" />
+    <property name="user.language" value="en" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.version.date" value="2021-01-19" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/sapmachine-jdk-11.0.10.jdk/Contents/Home" />
+    <property name="basedir" value="/Users/shreshttbhatt/ET_Training/ant/AntExample" />
+    <property name="file.separator" value="/" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="ant.java.version" value="11" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="isMac" value="true" />
+    <property name="test.report.dir" value="testreport" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="java.runtime.version" value="11.0.10+9-LTS-sapmachine" />
+    <property name="user.name" value="shreshttbhatt" />
+    <property name="ant.file.AntExample2" value="/Users/shreshttbhatt/ET_Training/ant/AntExample/build.xml" />
+    <property name="ant.file" value="/Users/shreshttbhatt/ET_Training/ant/AntExample/build.xml" />
+    <property name="path.separator" value=":" />
+    <property name="os.version" value="11.5.2" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="ant.project.invoked-targets" value="main" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="java.vendor.version" value="SapMachine" />
+    <property name="dist.dir" value="dist" />
+    <property name="ant.core.lib" value="/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant.jar" />
+    <property name="build.dir" value="build" />
+    <property name="java.vendor.url.bug" value="https://github.com/SAP/SapMachine/issues/new" />
+    <property name="java.io.tmpdir" value="/var/folders/8j/rjmz4lm52v59f1mc_m9dwj080000gn/T/" />
+    <property name="java.version" value="11.0.10" />
+    <property name="user.dir" value="/Users/shreshttbhatt/ET_Training/ant/AntExample" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="ant.home" value="/Users/shreshttbhatt/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.9 compiled on September 27 2020" />
+    <property name="java.library.path" value="/Users/shreshttbhatt/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor" value="SAP SE" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.vm.version" value="11.0.10+9-LTS-sapmachine" />
+    <property name="docs.dir" value="docs" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="java.class.version" value="55.0" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.default-target" value="main" />
+  </properties>
+  <testcase classname="math.MyMathTest" name="testMulti" time="0.002" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

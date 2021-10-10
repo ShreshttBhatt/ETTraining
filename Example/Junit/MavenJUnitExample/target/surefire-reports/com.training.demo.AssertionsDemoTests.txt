@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.training.demo.AssertionsDemoTests
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.13 s <<< FAILURE! - in com.training.demo.AssertionsDemoTests
+timeoutExceededWithPreemptiveTermination  Time elapsed: 0.021 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: execution timed out after 10 ms
+	at com.training.demo.AssertionsDemoTests.timeoutExceededWithPreemptiveTermination(AssertionsDemoTests.java:117)
+Caused by: org.junit.jupiter.api.AssertTimeout$ExecutionTimeoutException: Execution timed out in thread junit-timeout-thread-1
+	at app//com.training.demo.AssertionsDemoTests.lambda$timeoutExceededWithPreemptiveTermination$13(AssertionsDemoTests.java:119)
+
+timeoutExceeded  Time elapsed: 0.102 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: execution exceeded timeout of 10 ms by 92 ms
+	at com.training.demo.AssertionsDemoTests.timeoutExceeded(AssertionsDemoTests.java:107)
+
